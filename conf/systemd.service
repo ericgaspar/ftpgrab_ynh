@@ -1,15 +1,20 @@
 [Unit]
-Description=Small description of the service
+Description=FTPGrab
+Documentation=https://crazymax.dev/ftpgrab/
+After=syslog.target
 After=network.target
 
 [Service]
 Type=simple
 User=__APP__
 Group=__APP__
+RestartSec=2s
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/script
-StandardOutput=append:/var/log/__APP__/__APP__.log
-StandardError=inherit
+ExecStart=__INSTALL_DIR__/ftpgrab --config __INSTALL_DIR__/ftpgrab.yml --schedule "*/30 * * * *" --log-level info
+Restart=always
+Environment=TZ=Europe/Paris
+Environment=LOG_TIMESTAMP=false
+Environment=FTPGRAB_DB_PATH=__INSTALL_DIR__/ftpgrab.db
 
 ### Depending on specificities of your service/app, you may need to tweak these
 ### .. but this should be a good baseline
