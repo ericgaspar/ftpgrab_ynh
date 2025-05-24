@@ -17,7 +17,7 @@ server:
     logTrace: false
 
 download:
-  output: /download
+  output: __DATA_DIR__
   uid: 1000
   gid: 1000
   chmodFile: 0o644
