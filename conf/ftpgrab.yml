@@ -34,12 +34,12 @@ download:
 
 notif:
   mail:
-    host: smtp.example.com
-    port: 587
+    host: localhost
+    port: 25
     ssl: false
     insecureSkipVerify: false
-    from: ftpgrab@example.com
-    to: webmaster@example.com
+    from: ftpgrab@__DOMAIN__
+    to: webmaster@__DOMAIN__
   webhook:
     endpoint: http://webhook.foo.com/sd54qad89azd5a
     method: GET
