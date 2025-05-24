@@ -34,7 +34,7 @@ download:
 
 notif:
   mail:
-    host: localhost
+    host: __MAIN_DOMAIN__
     port: 25
     ssl: false
     insecureSkipVerify: false
