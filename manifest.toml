@@ -33,12 +33,6 @@ ram.build = "50M"
 ram.runtime = "50M"
 
 [install]
-    #[install.domain]
-    #type = "domain"
-
-    [install.init_main_permission]
-    type = "group"
-    default = "visitors"
 
 [resources]
 
@@ -56,5 +50,4 @@ ram.runtime = "50M"
 
     [resources.data_dir]
 
-    #[resources.permissions]
-    #main.url = "/"
+    [resources.permissions]
