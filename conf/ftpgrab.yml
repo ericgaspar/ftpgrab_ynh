@@ -38,8 +38,8 @@ notif:
     port: 25
     ssl: false
     insecureSkipVerify: false
-    from: ftpgrab@__DOMAIN__
-    to: webmaster@__DOMAIN__
+    from: ftpgrab@__MAIN_DOMAIN__
+    to: webmaster@__MAIN_DOMAIN__
   webhook:
     endpoint: http://webhook.foo.com/sd54qad89azd5a
     method: GET
